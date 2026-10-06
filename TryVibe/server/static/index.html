@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rich Nails — Сеть Beauty Студий</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Logo Header -->
+    <header class="logo-header">
+        <div class="logo-bg">
+            <div class="logo-content">
+                <div class="logo-icon-container">
+                    <img src="static/images/logo.png" alt="Rich Nails Logo" style="width:100%;height:auto;" id="logo-margin">
+                </div>
+                <div class="logo-text-container">
+                    <h1 class="logo-title">RICH NAILS</h1>
+                    <p class="logo-subtitle">СЕТЬ BEAUTY СТУДИЙ</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Slider -->
+    <section class="hero" id="hero">
+        <div class="slider">
+            <div class="slides-wrapper">
+                <div class="slide active">
+                    <img src="static/images/slide1.png" alt="Rich Nails">
+                    <div class="slide-overlay">
+                        <div class="slide-content">
+                            <h2 class="slide-title">Добро пожаловать в Rich Nails</h2>
+                            <p class="slide-subtitle">Профессиональный уход за ногтями в самом сердце Москвы</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="static/images/slide2.png" alt="Маникюр">
+                    <div class="slide-overlay">
+                        <div class="slide-content">
+                            <h2 class="slide-title">Искусство маникюра</h2>
+                            <p class="slide-subtitle">Каждый ноготок — произведение искусства</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="static/images/slide3.png" alt="Дизайн">
+                    <div class="slide-overlay">
+                        <div class="slide-content">
+                            <h2 class="slide-title">Стильный дизайн</h2>
+                            <p class="slide-subtitle">Индивидуальный подход к каждому клиенту</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="static/images/slide4.png" alt="Уход">
+                    <div class="slide-overlay">
+                        <div class="slide-content">
+                            <h2 class="slide-title">Забота о ваших руках</h2>
+                            <p class="slide-subtitle">СПА-процедуры для идеального результата</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="static/images/slide5.png" alt="Педикюр">
+                    <div class="slide-overlay">
+                        <div class="slide-content">
+                            <h2 class="slide-title">Педикюр премиум-класса</h2>
+                            <p class="slide-subtitle">Комфорт и красота ваших ног</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="slider-btn prev" onclick="prevSlide()">←</button>
+                <button class="slider-btn next" onclick="nextSlide()">→</button>
+                <div class="slider-dots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Info Bar -->
+    <section class="info-bar">
+        <div class="info-item">
+            <span class="info-icon">⭐</span>
+            <div>
+                <strong>Рейтинг 4.7</strong>
+                <small>620 оценок на 2GIS</small>
+            </div>
+        </div>
+        <div class="info-item">
+            <span class="info-icon">📍</span>
+            <div>
+                <strong>Филиалы Rich Nails</strong>
+                <small id="branchName">Кузьминки</small>
+            </div>
+        </div>
+        <div class="info-item">
+            <span class="info-icon">🕐</span>
+            <div>
+                <strong>Пн-Вс</strong>
+                <small>10:00 — 21:00</small>
+            </div>
+        </div>
+        <div class="info-item">
+            <span class="info-icon">📞</span>
+            <div>
+                <strong>+7 (499) 444-02-13</strong>
+                <small>Запись по телефону</small>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branches Slider -->
+    <section class="branches-slider">
+        <div class="branches-wrapper">
+            <div class="branch active">
+                <div class="branch-icon">📍</div>
+                <div class="branch-info">
+                    <h3>Rich Nails Кузьминки</h3>
+                    <p>Волгоградский пр-т, 121к8</p>
+                </div>
+            </div>
+            <div class="branch">
+                <div class="branch-icon">📍</div>
+                <div class="branch-info">
+                    <h3>Rich Nails Домодековская</h3>
+                    <p>Ореховый пр-т 6-Б, корп. 1</p>
+                </div>
+            </div>
+            <div class="branch">
+                <div class="branch-icon">📍</div>
+                <div class="branch-info">
+                    <h3>Rich Nails Пражская</h3>
+                    <p>ул. Красного Матроса, 1, корп. 1</p>
+                </div>
+            </div>
+            <div class="branch">
+                <div class="branch-icon">📍</div>
+                <div class="branch-info">
+                    <h3>Rich Nails Митино</h3>
+                    <p>Митинская ул., 27к2</p>
+                </div>
+            </div>
+        </div>
+        <div class="branch-controls">
+            <button class="branch-btn prev" onclick="prevBranch()">←</button>
+            <button class="branch-btn next" onclick="nextBranch()">→</button>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <h2>Наши услуги</h2>
+            <p>Полный каталог услуг с ценами из Rich Nails</p>
+        </div>
+        <div class="category-tabs">
+            <button class="tab active" data-category="all" onclick="filterServices('all', this)">Все</button>
+            <button class="tab" data-category="Маникюр" onclick="filterServices('Маникюр', this)">Маникюр</button>
+            <button class="tab" data-category="Педикюр" onclick="filterServices('Педикюр', this)">Педикюр</button>
+            <button class="tab" data-category="Брови и ресницы" onclick="filterServices('Брови и ресницы', this)">Брови и ресницы</button>
+            <button class="tab" data-category="Массаж" onclick="filterServices('Массаж', this)">Массаж</button>
+            <button class="tab" data-category="Депиляция" onclick="filterServices('Депиляция', this)">Депиляция</button>
+            <button class="tab" data-category="Для мужчин" onclick="filterServices('Для мужчин', this)">Для мужчин</button>
+        </div>
+        <div class="services-grid" id="servicesGrid"></div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews" id="reviews">
+        <div class="section-header">
+            <h2>Отзывы клиентов</h2>
+            <p>Что говорят о нас на 2GIS</p>
+        </div>
+        <div class="reviews-grid" id="reviewsGrid"></div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div class="modal-overlay" id="bookingModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Запись на приём</h3>
+                <button class="modal-close" onclick="closeBookingModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <form id="bookingForm" onsubmit="submitBooking(event)">
+                    <div class="form-group">
+                        <label>Ваше имя *</label>
+                        <input type="text" id="bookingName" required placeholder="Введите ваше имя">
+                    </div>
+                    <div class="form-group">
+                        <label>Телефон *</label>
+                        <input type="tel" id="bookingPhone" required placeholder="+7 (___) ___-__-__">
+                    </div>
+                    <div class="form-group">
+                        <label>Филиал *</label>
+                        <select id="bookingBranch" required>
+                            <option value="">Выберите филиал</option>
+                            <option value="Кузьминки">Rich Nails Кузьминки</option>
+                            <option value="Домодековская">Rich Nails Домодековская</option>
+                            <option value="Пражская">Rich Nails Пражская</option>
+                            <option value="Митино">Rich Nails Митино</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Услуга *</label>
+                        <select id="bookingService" required>
+                            <option value="">Выберите услугу</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Дата *</label>
+                        <input type="date" id="bookingDate" required onchange="loadTimeSlots()">
+                    </div>
+                    <div class="form-group" id="timeSlotsContainer" style="display:none;">
+                        <label>Время *</label>
+                        <div class="time-slots" id="timeSlots"></div>
+                    </div>
+                    <div class="form-group">
+                        <label>Комментарий</label>
+                        <textarea id="bookingNotes" placeholder="Дополнительные пожелания..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full" id="bookingSubmitBtn">Записаться</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Admin Panel -->
+    <div class="modal-overlay" id="adminModal">
+        <div class="modal admin-modal">
+            <div class="modal-header">
+                <h3>🔐 Админ-панель</h3>
+                <button class="modal-close" onclick="closeAdminModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <div id="adminLogin">
+                    <form onsubmit="adminLogin(event)">
+                        <div class="form-group">
+                            <label>Логин</label>
+                            <input type="text" id="adminUsername" required placeholder="Логин">
+                        </div>
+                        <div class="form-group">
+                            <label>Пароль</label>
+                            <input type="password" id="adminPassword" required placeholder="Пароль">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Войти</button>
+                    </form>
+                </div>
+                <div id="adminDashboard" style="display:none;">
+                    <div class="admin-header">
+                        <div>
+                            <h4>📋 Записи клиентов</h4>
+                            <select id="adminBranchFilter" onchange="loadBookings()" style="margin-top:10px;padding:8px;border-radius:8px;border:1px solid rgba(201,169,108,0.3);background:rgba(13,27,30,0.8);color:#C9A96C;font-size:14px;">
+                                <option value="all">Все филиалы</option>
+                                <option value="Кузьминки">Rich Nails Кузьминки</option>
+                                <option value="Домодековская">Rich Nails Домодековская</option>
+                                <option value="Пражская">Rich Nails Пражская</option>
+                                <option value="Митино">Rich Nails Митино</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary" onclick="openAddBookingModal()">➕ Добавить</button>
+                        <button class="btn btn-secondary" onclick="adminLogout()">Выйти</button>
+                    </div>
+                    <div class="bookings-list" id="bookingsList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Booking Modal -->
+    <div class="modal-overlay" id="addBookingModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>➕ Добавить запись</h3>
+                <button class="modal-close" onclick="closeAddBookingModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <form id="addBookingForm" onsubmit="submitAddBooking(event)">
+                    <div class="form-group">
+                        <label>Имя клиента *</label>
+                        <input type="text" id="addName" required placeholder="Введите имя">
+                    </div>
+                    <div class="form-group">
+                        <label>Телефон *</label>
+                        <input type="tel" id="addPhone" required placeholder="+7 (___) ___-__-__">
+                    </div>
+                    <div class="form-group">
+                        <label>Филиал *</label>
+                        <select id="addBranch" required>
+                            <option value="">Выберите филиал</option>
+                            <option value="Кузьминки">Rich Nails Кузьминки</option>
+                            <option value="Домодековская">Rich Nails Домодековская</option>
+                            <option value="Пражская">Rich Nails Пражская</option>
+                            <option value="Митино">Rich Nails Митино</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Услуга *</label>
+                        <select id="addService" required>
+                            <option value="">Выберите услугу</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Дата *</label>
+                        <input type="date" id="addDate" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Время *</label>
+                        <select id="addTime" required>
+                            <option value="">Выберите время</option>
+                            <option>10:00</option>
+                            <option>10:30</option>
+                            <option>11:00</option>
+                            <option>11:30</option>
+                            <option>12:00</option>
+                            <option>12:30</option>
+                            <option>13:00</option>
+                            <option>13:30</option>
+                            <option>14:00</option>
+                            <option>14:30</option>
+                            <option>15:00</option>
+                            <option>15:30</option>
+                            <option>16:00</option>
+                            <option>16:30</option>
+                            <option>17:00</option>
+                            <option>17:30</option>
+                            <option>18:00</option>
+                            <option>18:30</option>
+                            <option>19:00</option>
+                            <option>19:30</option>
+                            <option>20:00</option>
+                            <option>20:30</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Комментарий</label>
+                        <textarea id="addNotes" placeholder="Дополнительные пожелания..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Добавить запись</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <nav class="bottom-nav">
+        <button class="nav-btn active" onclick="scrollToSection('hero')">
+            <span class="nav-icon">🏠</span>
+            <span class="nav-label">Главная</span>
+        </button>
+        <button class="nav-btn" onclick="scrollToSection('services')">
+            <span class="nav-icon">💎</span>
+            <span class="nav-label">Услуги</span>
+        </button>
+        <button class="nav-btn" onclick="openBookingModal()">
+            <span class="nav-icon">📅</span>
+            <span class="nav-label">Записаться</span>
+        </button>
+        <button class="nav-btn" onclick="scrollToSection('reviews')">
+            <span class="nav-icon">⭐</span>
+            <span class="nav-label">Отзывы</span>
+        </button>
+        <button class="nav-btn" onclick="openAdminModal()">
+            <span class="nav-icon">🔐</span>
+            <span class="nav-label">Админ</span>
+        </button>
+    </nav>
+
+    <script>
+        let currentSlide = 0;
+        let slideInterval;
+        let selectedTime = '';
+        let isAdminLoggedIn = false;
+        let allServices = [];
+        let allReviews = [];
+        let allBookings = [];
+        let currentBranch = 0;
+        let branchInterval;
+
+        const branches = [
+            {name: 'Кузьминки', address: 'Волгоградский пр-т, 121к8'},
+            {name: 'Домодековская', address: 'Ореховый пр-т 6-Б, корп. 1'},
+            {name: 'Пражская', address: 'ул. Красного Матроса, 1, корп. 1'},
+            {name: 'Митино', address: 'Митинская ул., 27к2'}
+        ];
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initSlider();
+            initBranchSlider();
+            setMinDate();
+            loadServices();
+            loadReviews();
+        });
+
+        function initBranchSlider() {
+            branchInterval = setInterval(nextBranch, 4000);
+        }
+
+        function goToBranch(index) {
+            const branchEls = document.querySelectorAll('.branch');
+            branchEls[currentBranch].classList.remove('active');
+            currentBranch = index;
+            branchEls[currentBranch].classList.add('active');
+            document.getElementById('branchName').textContent = branches[currentBranch].name;
+            clearInterval(branchInterval);
+            branchInterval = setInterval(nextBranch, 4000);
+        }
+
+        function nextBranch() {
+            const branchEls = document.querySelectorAll('.branch');
+            const next = (currentBranch + 1) % branchEls.length;
+            goToBranch(next);
+        }
+
+        function prevBranch() {
+            const branchEls = document.querySelectorAll('.branch');
+            const prev = (currentBranch - 1 + branchEls.length) % branchEls.length;
+            goToBranch(prev);
+        }
+
+        function initSlider() {
+            const slides = document.querySelectorAll('.slide');
+            const dotsContainer = document.querySelector('.slider-dots');
+            
+            slides.forEach((_, i) => {
+                const dot = document.createElement('div');
+                dot.className = `slider-dot ${i === 0 ? 'active' : ''}`;
+                dot.onclick = () => goToSlide(i);
+                dotsContainer.appendChild(dot);
+            });
+            
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+
+        function goToSlide(index) {
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.slider-dot');
+            
+            slides[currentSlide].classList.remove('active');
+            dots[currentSlide].classList.remove('active');
+            
+            currentSlide = index;
+            
+            slides[currentSlide].classList.add('active');
+            dots[currentSlide].classList.add('active');
+            
+            clearInterval(slideInterval);
+            slideInterval = setInterval(nextSlide, 5000);
+        }
+
+        function nextSlide() {
+            const slides = document.querySelectorAll('.slide');
+            const next = (currentSlide + 1) % slides.length;
+            goToSlide(next);
+        }
+
+        function prevSlide() {
+            const slides = document.querySelectorAll('.slide');
+            const prev = (currentSlide - 1 + slides.length) % slides.length;
+            goToSlide(prev);
+        }
+
+        function setMinDate() {
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('bookingDate').min = today;
+        }
+
+        async function loadServices() {
+            try {
+                const response = await fetch('/api/services');
+                allServices = await response.json();
+                renderServices(allServices);
+                populateServiceSelect();
+            } catch (error) {
+                console.error('Error loading services:', error);
+            }
+        }
+
+        function renderServices(services) {
+            const grid = document.getElementById('servicesGrid');
+            grid.innerHTML = '';
+            
+            services.forEach(service => {
+                const card = document.createElement('div');
+                card.className = 'service-card fade-in';
+                card.innerHTML = `
+                    <div class="service-category">${service.category}</div>
+                    <div class="service-name">${service.name}</div>
+                    <div class="service-description">${service.description}</div>
+                    <div class="service-footer">
+                        <div class="service-price">${service.price} ₽</div>
+                        <div class="service-duration">${service.duration}</div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filterServices(category, btn) {
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            btn.classList.add('active');
+            
+            if (category === 'all') {
+                renderServices(allServices);
+            } else {
+                const filtered = allServices.filter(s => s.category === category);
+                renderServices(filtered);
+            }
+        }
+
+        async function loadReviews() {
+            try {
+                const response = await fetch('/api/reviews');
+                allReviews = await response.json();
+                renderReviews(allReviews);
+            } catch (error) {
+                console.error('Error loading reviews:', error);
+            }
+        }
+
+        function renderReviews(reviews) {
+            const grid = document.getElementById('reviewsGrid');
+            grid.innerHTML = '';
+            
+            reviews.forEach(review => {
+                const card = document.createElement('div');
+                card.className = 'review-card fade-in';
+                
+                let stars = '';
+                for (let i = 0; i < review.rating; i++) {
+                    stars += '<span class="star">★</span>';
+                }
+                
+                card.innerHTML = `
+                    <div class="review-header">
+                        <span class="review-author">${review.author}</span>
+                        <span class="review-date">${review.date}</span>
+                    </div>
+                    <div class="review-rating">${stars}</div>
+                    <div class="review-text">${review.text}</div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function populateServiceSelect() {
+            const select = document.getElementById('bookingService');
+            select.innerHTML = '<option value="">Выберите услугу</option>';
+            allServices.forEach(service => {
+                const option = document.createElement('option');
+                option.value = service.name;
+                option.textContent = `${service.name} — ${service.price} ₽`;
+                select.appendChild(option);
+            });
+        }
+
+        async function loadTimeSlots() {
+            const date = document.getElementById('bookingDate').value;
+            if (!date) return;
+            
+            const container = document.getElementById('timeSlotsContainer');
+            const slotsDiv = document.getElementById('timeSlots');
+            container.style.display = 'block';
+            slotsDiv.innerHTML = '';
+            
+            let bookings = [];
+            try {
+                const response = await fetch('/api/bookings');
+                bookings = await response.json();
+            } catch (error) {
+                console.error('Error loading bookings:', error);
+            }
+            
+            const bookedTimes = bookings
+                .filter(b => b.date === date)
+                .map(b => b.time);
+            
+            const timeSlots = [
+                '10:00', '10:30', '11:00', '11:30',
+                '12:00', '12:30', '13:00', '13:30',
+                '14:00', '14:30', '15:00', '15:30',
+                '16:00', '16:30', '17:00', '17:30',
+                '18:00', '18:30', '19:00', '19:30',
+                '20:00', '20:30'
+            ];
+            
+            timeSlots.forEach(time => {
+                const slot = document.createElement('div');
+                slot.className = 'time-slot';
+                slot.textContent = time;
+                
+                if (bookedTimes.includes(time)) {
+                    slot.classList.add('booked');
+                    slot.title = 'Уже занято';
+                } else {
+                    slot.onclick = () => selectTimeSlot(slot, time);
+                }
+                
+                slotsDiv.appendChild(slot);
+            });
+        }
+
+        function selectTimeSlot(element, time) {
+            document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+            element.classList.add('selected');
+            selectedTime = time;
+        }
+
+        async function submitBooking(e) {
+            e.preventDefault();
+            
+            if (!selectedTime) {
+                alert('Пожалуйста, выберите время');
+                return;
+            }
+            
+            const booking = {
+                name: document.getElementById('bookingName').value,
+                phone: document.getElementById('bookingPhone').value,
+                branch: document.getElementById('bookingBranch').value,
+                service: document.getElementById('bookingService').value,
+                date: document.getElementById('bookingDate').value,
+                time: selectedTime,
+                notes: document.getElementById('bookingNotes').value
+            };
+            
+            try {
+                const response = await fetch('/api/booking', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(booking)
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    alert('✅ Вы успешно записаны!\n\n' +
+                          'Имя: ' + data.name + '\n' +
+                          'Услуга: ' + data.service + '\n' +
+                          'Дата: ' + data.date + '\n' +
+                          'Время: ' + data.time);
+                    closeBookingModal();
+                    resetBookingForm();
+                } else {
+                    const error = await response.json();
+                    alert('❌ ' + error.error);
+                }
+            } catch (error) {
+                alert('❌ Ошибка при записи: ' + error.message);
+            }
+        }
+
+        function resetBookingForm() {
+            document.getElementById('bookingForm').reset();
+            selectedTime = '';
+            document.getElementById('timeSlotsContainer').style.display = 'none';
+            document.querySelectorAll('.time-slot').forEach(s => s.classList.remove('selected'));
+        }
+
+        function openBookingModal() {
+            document.getElementById('bookingModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeBookingModal() {
+            document.getElementById('bookingModal').classList.remove('active');
+            document.body.style.overflow = '';
+            resetBookingForm();
+        }
+
+        function openAdminModal() {
+            document.getElementById('adminModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+            
+            if (isAdminLoggedIn) {
+                loadBookings();
+            }
+        }
+
+        function closeAdminModal() {
+            document.getElementById('adminModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function openAddBookingModal() {
+            document.getElementById('addBookingModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+            populateAddServiceSelect();
+        }
+
+        function closeAddBookingModal() {
+            document.getElementById('addBookingModal').classList.remove('active');
+            document.body.style.overflow = '';
+            document.getElementById('addBookingForm').reset();
+        }
+
+        function populateAddServiceSelect() {
+            const select = document.getElementById('addService');
+            select.innerHTML = '<option value="">Выберите услугу</option>';
+            allServices.forEach(service => {
+                const option = document.createElement('option');
+                option.value = service.name;
+                option.textContent = `${service.name} — ${service.price} ₽`;
+                select.appendChild(option);
+            });
+        }
+
+        async function submitAddBooking(e) {
+            e.preventDefault();
+            
+            const booking = {
+                name: document.getElementById('addName').value,
+                phone: document.getElementById('addPhone').value,
+                branch: document.getElementById('addBranch').value,
+                service: document.getElementById('addService').value,
+                date: document.getElementById('addDate').value,
+                time: document.getElementById('addTime').value,
+                notes: document.getElementById('addNotes').value
+            };
+            
+            try {
+                const response = await fetch('/api/booking', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(booking)
+                });
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    alert('✅ Запись успешно добавлена!');
+                    closeAddBookingModal();
+                    await loadBookings();
+                } else {
+                    const error = await response.json();
+                    alert('❌ ' + error.error);
+                }
+            } catch (error) {
+                alert('❌ Ошибка: ' + error.message);
+            }
+        }
+
+        async function adminLogin(e) {
+            e.preventDefault();
+            
+            const username = document.getElementById('adminUsername').value;
+            const password = document.getElementById('adminPassword').value;
+            
+            try {
+                const response = await fetch('/api/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ username, password })
+                });
+                
+                if (response.ok) {
+                    isAdminLoggedIn = true;
+                    document.getElementById('adminLogin').style.display = 'none';
+                    document.getElementById('adminDashboard').style.display = 'block';
+                    await loadBookings();
+                } else {
+                    alert('❌ Неверный логин или пароль');
+                }
+            } catch (error) {
+                alert('❌ Ошибка авторизации: ' + error.message);
+            }
+        }
+
+        function adminLogout() {
+            isAdminLoggedIn = false;
+            document.getElementById('adminLogin').style.display = 'block';
+            document.getElementById('adminDashboard').style.display = 'none';
+            document.getElementById('adminUsername').value = '';
+            document.getElementById('adminPassword').value = '';
+        }
+
+        async function loadBookings() {
+            try {
+                const response = await fetch('/api/bookings');
+                allBookings = await response.json();
+                
+                const filter = document.getElementById('adminBranchFilter').value;
+                const filtered = filter === 'all' ? allBookings : allBookings.filter(b => b.branch === filter);
+                
+                const list = document.getElementById('bookingsList');
+                list.innerHTML = '';
+                
+                if (filtered.length === 0) {
+                    list.innerHTML = '<p style="text-align:center;color:#a0a0a0;padding:40px;">Нет записей</p>';
+                    return;
+                }
+                
+                filtered.forEach(booking => {
+                    const item = document.createElement('div');
+                    item.className = 'booking-item fade-in';
+                    item.innerHTML = `
+                        <div class="booking-info">
+                            <div class="booking-name">${booking.name}</div>
+                            <div class="booking-details">
+                                <span>📞 ${booking.phone}</span>
+                                <span>📍 ${booking.branch || 'Не указан'}</span>
+                                <span>💅 ${booking.service}</span>
+                                <span>📅 ${booking.date}</span>
+                                <span>🕐 ${booking.time}</span>
+                                ${booking.notes ? `<span>📝 ${booking.notes}</span>` : ''}
+                            </div>
+                        </div>
+                        <div class="booking-actions">
+                            <button class="btn btn-danger" onclick="deleteBooking(${booking.id})">Удалить</button>
+                        </div>
+                    `;
+                    list.appendChild(item);
+                });
+            } catch (error) {
+                console.error('Error loading bookings:', error);
+            }
+        }
+
+        async function deleteBooking(id) {
+            if (!confirm('Вы уверены, что хотите удалить эту запись?')) return;
+            
+            try {
+                const response = await fetch(`/api/booking/${id}`, {
+                    method: 'DELETE'
+                });
+                
+                if (response.ok) {
+                    await loadBookings();
+                } else {
+                    alert('❌ Ошибка при удалении');
+                }
+            } catch (error) {
+                alert('❌ Ошибка: ' + error.message);
+            }
+        }
+
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+            
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.closest('.nav-btn').classList.add('active');
+        }
+
+        document.querySelectorAll('.modal-overlay').forEach(overlay => {
+            overlay.addEventListener('click', (e) => {
+                if (e.target === overlay) {
+                    overlay.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal-overlay').forEach(overlay => {
+                    overlay.classList.remove('active');
+                });
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
+</body>
+</html>
